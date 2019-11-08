@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset = "UTF-8">
+    <title>Create an Account</title>
+    <link rel="stylesheet" type="text/css" href="style-sign.css">
+
+    <style>
+      h1{
+        animation-duration: 1.5s;
+        animation-timing-function: ease-out; 
+        animation-name: slidein;
+      }
+
+    @keyframes slidein {
+        from {
+          margin-left: 100%;
+          width: 300%; 
+        }
+
+        to {
+          margin-left: 0%;
+          width: 100%;
+        }
+    }
+
+      #dorm{
+        color: gray;
+      }
+
+  </style>
+
+  </head>
+  <body style="background-image: url('https://78.media.tumblr.com/169831822d094fa0317de8d9b0b94fd4/tumblr_p0ls5q9gv01s8e2vio1_500.gif')">
+    <h1 style="font-family: verdana;">Create An Account</h1>
+    <fieldset style="width:30%; background-color: #fafafa;">
+      <form style="font-family: verdana; font-size: 75%;" class="ajax" action="sign-up.php" method="post">
+        Type of Account:<br> 
+        <input type="radio" name="account_type" class="radio" value="student" checked> Student <br>
+        <input type="radio" name="account_type" class="radio" value="organization"> Organization <br>
+        Name:<br>
+        <input type="text" name="name"><br>
+        Dorm Building:<br>
+        <input type="text" name="address" value="building and room #" id="dorm" onfocus="if (this.value=='building and room #') this.value='';"><br>
+        Email Address:<br>
+        <input type="text" name="email"><br>
+        Password:<br>
+        <input type="password" name="password"><br>
+        <br><input style="font-family: verdana; font-size: 100%;" type="submit" value="Submit" id="submit">
+      </form>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script>
+        $(".radio").click(function() {
+    if ($("input[name=account_type]:checked").val() == "student") {
+        $("#dorm").attr("disabled", false);
+    }else{
+      $("#dorm").attr("disabled", true);
+    }
+});
+
+      </script>
+
+
+
+    <script type="text/javascript">
+      $('form.ajax').on('submit', function(){
+        var that = $(this),
+            url = that.attr('action'),
+            type = that.attr('method'),
+            data = {};
+
+          that.find('[name]').each(function(index, value){
+            var that = $(this),
+            name = that.attr('name'),
+            value = that.val();
+
+          data[name] = value;
+          });
+
+          var radio1 = $('input[type="radio"]:checked').val();
+          data['account_type'] = radio1;
+
+          $.ajax({
+            url: url,
+            type: type,
+            data: data,
+            success: function(response){
+              if(response.localeCompare("This account already exists!") == 0 || response.localeCompare("Must fill out all of form") == 0){
+                document.getElementById("p1").innerHTML = response;
+              }else{
+                window.location.href = response;
+              }
+              
+            }
+
+          });
+
+
+        return false;
+      });
+    </script>
+
+
+    </fieldset>
+<p id="p1"></p>
+
+<a style="font-family: verdana; font-size: 80%;" href="/login.html"><strong>Login!</strong></a> | <a style="font-family: verdana; font-size: 80%;" href="/index.php"><strong>Go Back</strong></a>
+
+
+  </body>
+</html>

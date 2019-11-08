@@ -1,0 +1,16 @@
+pages
+	-config page for buyers and sellers
+		-sellers (orgs)
+			-add products
+			-change org names
+			-add emails/text (PUSH TO DELIVERY BOY)
+				-whenever someone buys something from the org, sends and email to the people to deliver it to the buyer
+					-link to tap to pick up the shift
+		-buyer (students)
+			-change delivery address
+			-favorites
+				-products
+				-orgs
+	-order page (front page)
+		-list of orgs
+		-use ajax to update products dynamically

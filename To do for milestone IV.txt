@@ -1,0 +1,10 @@
+A cart display/submit page - Zac
+AJAX adding to cart - Jason/Kelly
+Message center
+Type column in products - Ryan
+Filter for student landing page product display - Ryan
+Favorites page
+Profile Customization - Kelly
+Sign-out redirects to sign in page and AJAX clears cookies
+New Primary key for products to allow for multiple products of same name - Ryan
+

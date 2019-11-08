@@ -1,0 +1,19 @@
+Things to do before presentation:
+
+Ryan !Add pictures and descripton for products
+	*Variable "Features"/Options
+	*Organization "inactive"/past products that can be enabled
+	*Add in active time period for products
+Kelly - Profile Page needs Work:
+		Address
+		Profile Pictures
+Zac *Forgot Password
+	Security Questions - Dropdown list - Number each and store number in db with hashed answer
+Jason !Google Maps Directions
+Jason !Messages need work
+	Jason - Automate message for checkout
+	Make Look Nicer
+	Automate 
+Zac Student Favorites page
+
+	
