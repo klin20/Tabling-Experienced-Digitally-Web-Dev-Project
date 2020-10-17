@@ -1,6 +1,6 @@
 # Project Title
 
-UofR Bubble Tea 
+Tabling Experienced Digitally
 
 ## Getting Started
 
